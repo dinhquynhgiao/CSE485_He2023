@@ -1,54 +1,85 @@
-
 <?php
+class Employee {
+    private $id;
+    private $name;
+    private $address;
 
-
-class Employees{
-    //properties
-
-    private $EmployeeID;
-    private $Name;
-    private $Address;
-    private $Salary;
-
-    //method
-
-    public function __construct($EmployeeID, $Name, $Address, $Salary){
-        $this->EmployeeID = $EmployeeID;
-        $this->Name = $Name;
-        $this->Address = $Address;
-        $this->Salary = $Salary;
-
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
-    //Getter/Setter;
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
-    public function getEmployeesID(){
-        return $this->EmployeeID;
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
     }
-    public function setEmployeesID($EmployeeID){
-        $this->EmployeeID= $EmployeeID;
 
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
-    public function getName(){
-        return $this->Name;
-    }
-    public function setName($Name){
-        $this->Name= $Name;
 
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
     }
-    public function getAddress(){
-        return $this->Address;
-    }
-    public function setAddress($Address){
-        $this->Address= $Address;
 
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
     }
-    public function getSalary(){
-        return $this->Salary;
-    }
-    public function setSalary($Salary){
-        $this->Salary= $Salary;
 
+    /**
+     * @return mixed
+     */
+    public function getSalary()
+    {
+        return $this->salary;
     }
-    
+
+    /**
+     * @param mixed $salary
+     */
+    public function setSalary($salary)
+    {
+        $this->salary = $salary;
+    }
+    private $salary;
+
+    /**
+     * @param $id
+     * @param $name
+     * @param $address
+     * @param $salary
+     */
+    public function __construct($id, $name, $address, $salary)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->address = $address;
+        $this->salary = $salary;
+    }
 }

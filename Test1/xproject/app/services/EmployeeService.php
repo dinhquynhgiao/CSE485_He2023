@@ -7,7 +7,7 @@ class EmployeeService{
     public function getAllEmployees(){
         //Buoc 1 ke noi database
         try{
-            $conn = new PDO('mysql:host=localhost;dbname=mvc', 'root',);
+            $conn = new PDO('mysql:host=localhost;dbname=employees', 'root',);
 
             //truy van du lieu
             $sql = "SELECT * FROM employees ORDER BY EmployeeID desc";

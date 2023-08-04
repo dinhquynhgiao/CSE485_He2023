@@ -1,12 +1,12 @@
 <?php 
 define('APP_ROOT', dirname(__FILE__,3));
-define('DOMAIN' , 'https://localhost/xproject/');
+define('DOMAIN' , 'https://localhost/employees/');
 
 
 // class Database {
 //     // Specify your own database credentials
 //     private $host = 'localhost';
-//     private $db_name = 'MVC';
+//     private $db_name = '';
 //     private $username = 'root';
 //     private $password = '';
 //     public $conn;

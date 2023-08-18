@@ -48,7 +48,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>URL</strong>
-                <input type="number" name="URL" class="form-control" placeholder="URL">
+                <input type="url" name="URL" class="form-control" placeholder="URL">
             </div>
         </div>
         

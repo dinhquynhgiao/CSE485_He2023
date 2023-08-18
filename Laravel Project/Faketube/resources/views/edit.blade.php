@@ -48,14 +48,14 @@
             <div class="row mb-3">
                 <label class="col-sm-2 col-label-form">SubscribersCount</label>
                 <div class="col-sm-10">
-                    <input type="text" name="SubscribersCount" class="form-control" value="{{ $channel->SubscribersCount }}" />
+                    <input type="number" name="SubscribersCount" class="form-control" value="{{ $channel->SubscribersCount }}" />
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-2 col-label-form">URL</label>
                 <div class="col-sm-10">
-                    <input type="text" name="URL" class="form-control" value="{{ $channel->URL }}" />
+                    <input type="url" name="URL" class="form-control" value="{{ $channel->URL }}" />
                 </div>
             </div>
 

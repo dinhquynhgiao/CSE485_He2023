@@ -17,10 +17,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Channels Management</h2>
+                <h2>List of Channels</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success float-end my-3" href="{{ route('channels.create') }}"> Create New +</a>
+                <a class="btn btn-success float-end my-3" href="{{ route('channels.create') }}"> Create New Channel</a>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
             <p>{{ $message }}</p> </div>
         @endif
        
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="width:100%">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -44,10 +44,10 @@
             <tbody>
             @foreach($channels as $cha)
                 <tr>
-                    <th scope="row">{{$cha->id}}</th>
-                    <td>{{$cha->Name}}</td>
-                    <td>{{$cha->Description}}</td>
-                    <td>{{$cha->SubscribersCount}}</td>
+                    <th>{{$cha->id}}</th>
+                    <td>{{$cha->name}}</td>
+                    <td>{{$cha->description}}</td>
+                    <td>{{$cha->subscribersCount}}</td>
                     <td>{{$cha->URL}}</td>
                     <td>
                         <a href="{{ route('channels.show', ['channel' => $cha->id]) }}"><i class="bi bi-eye"></i></a>
@@ -56,7 +56,7 @@
                         <a href="{{ route('channels.edit', ['channel' => $cha->id]) }}"><i class="bi bi-pencil"></i></a>
                     </td>
                     <td>
-                        <a data-id="{{ $cha->id }}" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger delete-button"><i class="bi bi-trash"></i></a>
+                        <a data-id="{{ $cha->id }}" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn delete-button"><i class="bi bi-trash"></i></a>
                         <!-- Delete Confirmation Modal -->
                         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                             <form method="post" action="{{ route('channels.destroy', ['channel' => $cha->id]) }}">

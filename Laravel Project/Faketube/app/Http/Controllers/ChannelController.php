@@ -59,7 +59,7 @@ class ChannelController extends Controller
         $channel  = Channel::find($id);
 
         //Trả về trang hiển thị Chi tiết
-        return view('.detail', compact('channel'));
+        return view('.detail', compact('channels'));
     }
 
     /**
@@ -67,7 +67,7 @@ class ChannelController extends Controller
      */
     public function edit(string $id)
     {
-        return view('.edit', compact('channel'));
+        return view('.edit', compact('channels'));
     }
 
     /**
